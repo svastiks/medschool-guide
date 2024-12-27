@@ -11,13 +11,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "Ranking")
+@Table(name = "Rankings")
 public class Rankings {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String universityName;
+    private String name;
     private Integer rank;
     private String description;
 
@@ -31,11 +31,11 @@ public class Rankings {
     }
 
     public String getUniversityName() {
-        return universityName;
+        return name;
     }
 
     public void setUniversityName(String universityName) {
-        this.universityName = universityName;
+        this.name = universityName;
     }
 
     public Integer getRank() {
