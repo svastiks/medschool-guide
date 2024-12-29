@@ -10,9 +10,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         &times;
       </button>
       <ul>
-        <li><Link to="/" onClick={toggleSidebar}>Home</Link></li>
-        <li><Link to="/rankings" onClick={toggleSidebar}>Rankings</Link></li>
-        <li><Link to="/reddit" onClick={toggleSidebar}>Reddit</Link></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/rankings">Rankings</Link></li>
+        <li><Link to="/reddit">Reddit</Link></li>
+        <li><Link to="/community">Community</Link></li>
       </ul>
     </div>
   );

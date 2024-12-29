@@ -9,6 +9,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Home from './components/Home/Home'
 import RedditReferences from './components/RedditReferences/RedditReference';
 import Header from './components/Header/Header';
+import Community from './components/Community/Community';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/rankings" element={<Rankings />}/>
           <Route path="/reddit" element={<RedditReferences />}/>
+          <Route path="/community" element={<Community />}/>
         </Routes>
       </div>
     </div>
