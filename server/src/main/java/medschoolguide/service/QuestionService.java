@@ -7,16 +7,20 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ReplyService {
+public class QuestionService {
 
     @Autowired
     private QuestionRepository questionRepository;
 
-    public List<Question> getRepliesByQuestionId(String questionId) {
-        return questionRepository.findByQuestionId(questionId);
+    public List<Question> getQuestionsById(Long id) {
+        return questionRepository.findQuestionById(id);
     }
 
-    public Question saveReply(Question question) {
+    public Question saveQuestion(Question question) {
         return questionRepository.save(question);
+    }
+
+    public List<Question> getAllQuestions() {
+        return questionRepository.findAll();
     }
 }

@@ -8,15 +8,12 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "replies") // Maps this entity to the "replies" table in the database
-public class Reply {
+@Table(name = "posted_questions") // Maps this entity to the "replies" table in the database
+public class Question {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-generate the primary key
     private Long id; // Primary key for the entity
-
-    @Column(name = "question_id", nullable = false)
-    private String questionId; // Foreign key or reference to a question
 
     @Column(name = "author", nullable = false)
     private String author;
@@ -31,14 +28,6 @@ public class Reply {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getQuestionId() {
-        return questionId;
-    }
-
-    public void setQuestionId(String questionId) {
-        this.questionId = questionId;
     }
 
     public String getAuthor() {
