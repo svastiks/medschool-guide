@@ -32,7 +32,7 @@ const Rankings = () => {
             <ul>
                 {rankings.map((ranking) => (
                 <li key={ranking.id}>
-                    <strong>{ranking.rank}. {ranking.name}</strong>
+                    <strong>{ranking.name} {ranking.rank}</strong>
                     <p>{ranking.description}</p>
                 </li>
                 ))}

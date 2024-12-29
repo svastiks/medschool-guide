@@ -1,0 +1,14 @@
+.burger-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .burger-icon .line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+  }
