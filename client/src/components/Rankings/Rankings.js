@@ -11,7 +11,6 @@ const Rankings = () => {
             try {
                 const response = await axios.get("http://localhost:8080/api/rankings")
                 setRankings(response.data)
-                console.log(response)
             } catch(error){
                 console.error("Error getting rankings", error);
             } finally {
