@@ -29,7 +29,7 @@ const FetchQuestions = () => {
         <div>
             <h1>POSTED CONTENT</h1>
             {questions.map((question) => (
-                <div>
+                <div id={question.id}>
                     {question.author}
                     {question.content}
                 </div>

@@ -10,6 +10,7 @@ import Home from './components/Home/Home'
 import RedditReferences from './components/RedditReferences/RedditReference';
 import Header from './components/Header/Header';
 import Community from './components/Community/Community';
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/community" element={<Community />}/>
         </Routes>
       </div>
+      {/* <Footer /> */}
     </div>
     </Router>
   );

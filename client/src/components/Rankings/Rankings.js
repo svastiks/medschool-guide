@@ -11,29 +11,29 @@ const Rankings = () => {
             try {
                 const response = await axios.get("http://localhost:8080/api/rankings")
                 setRankings(response.data)
-            } catch(error){
+            } catch (error) {
                 console.error("Error getting rankings", error);
             } finally {
                 setLoading(false)
             }
         };
-    
-        fetchRankings();    
+
+        fetchRankings();
     }, []);
 
-    if(loading) {
+    if (loading) {
         return <div>Rankings....</div>
     }
 
-    return(
+    return (
         <div>
             <h1>Canadian Medical School Rankings</h1>
             <ul>
                 {rankings.map((ranking) => (
-                <li key={ranking.id}>
-                    <strong>{ranking.name} {ranking.rank}</strong>
-                    <p>{ranking.description}</p>
-                </li>
+                    <li key={ranking.id}>
+                        <strong>University: {ranking.universityName} Rank: {ranking.rank} Minimum Gpa: {ranking.gpa} Required MCAT: {ranking.mcat}</strong>
+                        <p>{ranking.description}</p>
+                    </li>
                 ))}
             </ul>
         </div>

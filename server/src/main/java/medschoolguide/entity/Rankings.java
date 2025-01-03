@@ -19,6 +19,25 @@ public class Rankings {
     private Integer id;
     private String name;
     private Integer rank;
+    private Float gpa;
+    private Integer mcat;
+
+    public Float getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(Float gpa) {
+        this.gpa = gpa;
+    }
+
+    public Integer getMcat() {
+        return mcat;
+    }
+
+    public void setMcat(Integer mcat) {
+        this.mcat = mcat;
+    }
+
     private String description;
 
     //Getters and Setters
